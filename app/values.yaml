@@ -1,0 +1,13 @@
+config:
+  spec:
+    destination:
+      server: 'https://kubernetes.default.svc'
+    source:
+      repoURL: 'https://github.com/julielee-dev/argocd-deploy.git'
+      targetRevision: HEAD
+
+applications:
+  - name: hello-world
+    tool:
+      helm:
+        releaseName: hello-world
