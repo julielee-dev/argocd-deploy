@@ -1,3 +1,0 @@
-Thank you for installing hello-world.
-
-To access the service (if ClusterIP) use port forwarding or change the service type.
