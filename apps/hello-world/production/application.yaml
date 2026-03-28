@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-production
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'git@github.com:julielee-dev/argocd-deploy.git'
+    targetRevision: HEAD
+    path: 'charts/hello-world'
+    helm:
+      values: |
+        replicaCount: 3
+        image:
+          tag: production
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: production
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
