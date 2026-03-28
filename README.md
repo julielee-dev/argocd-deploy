@@ -23,7 +23,8 @@ Spin up Minikube
 
 Spin up ArgoCD locally
 
-```kubectl create namespace argocd
+```
+kubectl create namespace argocd
 kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
@@ -31,10 +32,12 @@ Check to verify if ArgoCD has stood up in your cluster and set your kube config 
 
 ``` kubectl config set-context --current --namespace=argocd
     kubectl get pods
-    ```
+
+```
 
 You should see at least 7 pods stood up:
-    ```
+
+```
     argocd-application-controller
     argocd-applicationset-controller
     argocd-dex-server
@@ -42,7 +45,8 @@ You should see at least 7 pods stood up:
     argocd-redis
     argocd-repo-server
     argocd-server
-    ```
+```
+
 For ease, we will expose the service of argocd-server to port 8080
 
 `kubectl port-forward svc/argocd-server -n argocd 8080:443`
