@@ -1,5 +1,5 @@
 ## Set up working Environment Basics
-1. To set up your working environment you'll need to set up these tooling.
+To set up your working environment you'll need to set up these tooling.
 
 I use homebrew but will include the necessary zip files for those who don't use homebrew. This is also under the assumption you are working on a Mac with xcode installed and Docker Desktop installed and running.
 
