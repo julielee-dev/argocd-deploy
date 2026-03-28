@@ -61,8 +61,14 @@ In a new CLI, because the current one you're probably using is port-forwarding A
 
 Grab the output of the password and login with the user admin and paste the password into the UI.
 
-Download my hello-world app.
+You should be able to run the command below for a dry run and install it into your local cluster. 
 
-`git clone https://github.com/julielee-dev/hello-world.git`
+`helm install test-hello ./helm --dry-run --debug`
 
- 
+This should output the manifest file for you in your command line.
+
+With the output you should be now able to deploy it into your local cluster with 
+
+`helm install hello-world ./helm --namespace default --create-namespace`
+
+(But it won't cause you'll need access to the ECR that it is deployed to :( ))
