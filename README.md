@@ -1,7 +1,13 @@
 ## Set up working Environment Basics
 To set up your working environment you'll need to set up these tooling.
 
-I use homebrew but will include the necessary zip files for those who don't use homebrew. This is also under the assumption you are working on a Mac with xcode installed and Docker Desktop installed and running.
+I use homebrew to set up this environment. This is also under the assumption you are working on a Mac with xcode installed and Docker Desktop installed and running.
+
+### Note 
+It is important to note for Macbook users to turn off Airplay Reciever as it runs on port 5000 and will interfere with the set up of ArgoCD.
+
+System Settings -> General -> AirDrop & Handoff -> Toggle off AirPlay Reciever
+
 
 Install Docker Desktop
 https://www.docker.com/products/docker-desktop/
