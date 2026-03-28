@@ -30,7 +30,8 @@ kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubuse
 Check to verify if ArgoCD has stood up in your cluster and set your kube config to namespace argocd
 
 ``` kubectl config set-context --current --namespace=argocd
-    kubectl get pods```
+    kubectl get pods
+    ```
 
 You should see at least 7 pods stood up:
     ```
