@@ -16,9 +16,12 @@ Set up K8s environment and CLI
 
 `brew install kubectl helm kustomize minikube docker argocd`
 
-Make sure to verify tools are installed with `brew list`
+Make sure to verify tools are installed with
+
+`brew list`
 
 Spin up Minikube
+
 `minikube start --driver=docker`
 
 Spin up ArgoCD locally
@@ -51,26 +54,36 @@ You should see at least 7 pods stood up:
 
 For ease, we will expose the service of argocd-server to port 8080
 
-`kubectl port-forward svc/argocd-server -n argocd 8080:443`
+```
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
 
 Verify on your browser if this is port is exposed here:
 
-`https://localhost:8080/`
+```
+https://localhost:8080/
+```
 
 In a new CLI, because the current one you're probably using is port-forwarding ArgoCD UI, grab the auto-generated password to log into argocd UI
 
-`argocd admin initial-password -n argocd`
+```
+argocd admin initial-password -n argocd
+```
 
 Grab the output of the password and login with the user admin and paste the password into the UI.
 
 You should be able to run the command below for a dry run and install it into your local cluster. 
 
-`helm install test-hello ./helm --dry-run --debug`
+```
+helm install test-hello ./helm --dry-run --debug
+```
 
 This should output the manifest file for you in your command line.
 
 With the output you should be now able to deploy it into your local cluster with 
 
-`helm install hello-world ./helm --namespace default --create-namespace`
+```
+helm install hello-world ./helm --namespace default --create-namespace
+```
 
 (But it won't cause you'll need access to the ECR that it is deployed to :( ))
