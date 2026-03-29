@@ -14,15 +14,21 @@ https://www.docker.com/products/docker-desktop/
 
 Set up K8s environment and CLI
 
-`brew install kubectl helm kustomize minikube docker argocd`
+```
+brew install kubectl helm kustomize minikube docker argocd
+```
 
 Make sure to verify tools are installed with
 
-`brew list`
+```
+brew list
+```
 
 Spin up Minikube
 
-`minikube start --driver=docker`
+```
+minikube start --driver=docker
+```
 
 Spin up ArgoCD locally
 
