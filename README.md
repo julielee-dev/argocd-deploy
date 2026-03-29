@@ -8,7 +8,7 @@ It is important to note for Macbook users to turn off Airplay Reciever as it run
 
 System Settings -> General -> AirDrop & Handoff -> Toggle off AirPlay Reciever
 
-##Set Up
+## Set Up
 Install Docker Desktop
 https://www.docker.com/products/docker-desktop/
 
